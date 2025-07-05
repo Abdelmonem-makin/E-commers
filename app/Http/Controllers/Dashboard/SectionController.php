@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Section;
 use Illuminate\Http\Request;
 
 class SectionController extends Controller
@@ -12,7 +13,11 @@ class SectionController extends Controller
      */
     public function index()
     {
-        //
+        $sections  = Section::get();
+      return view('Dashboard.section.index', compact('sections'));
+    }
+    function section_chaneg_Status()  {
+
     }
 
     /**
